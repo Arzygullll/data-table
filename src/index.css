@@ -1,13 +1,83 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f0f0f0;
+  border-radius: 8px;
+}
+h1 {
+  color: #007582;
+  font-family: Cinzel;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input[type="text"] {
+  padding: 12px;
+  margin-bottom: 20px;
+  width: 97%;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+  border-color: #ff6666;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 16px;
+  text-align: left;
+}
+
+th {
+  background: linear-gradient(135deg, #007582, #2baee2);
+  color: white;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background: #f8f8ff;
+}
+
+tr:hover {
+  background: #e6e6fa;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container button {
+  background: linear-gradient(135deg, #008080, #20b2aa);
+  color: white;
+  padding: 12px 20px;
+  margin: 0 4px;
+  border: 2px solid #008080;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.container button.active {
+  background: linear-gradient(135deg, #ff6666, #ff1a1a);
+  border-color: #ff6666;
+}
+
+.container button:hover:not(.active) {
+  background: linear-gradient(135deg, #5f9ea0, #4682b4);
+  border-color: #5f9ea0;
 }
